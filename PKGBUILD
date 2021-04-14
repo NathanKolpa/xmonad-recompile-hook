@@ -14,5 +14,6 @@ md5sums=('SKIP')
 
 package() {
 	cd "xmonad-recompile-hook"
-	make DESTDIR="$pkgdir/" install
+	mkdir -p "$pkgdir/usr/share/libalpm/hooks/"
+	cp xmonad-recompile.hook "$pkgdir/usr/share/libalpm/hooks/xmonad-recompile.hook"
 }
