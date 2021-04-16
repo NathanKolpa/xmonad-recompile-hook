@@ -10,4 +10,5 @@ Target = haskell-*
 Description = Recompiling xmonad after update
 When = PostTransaction
 Depends = coreutils
+Depends = xmonad
 Exec = /bin/sh -c 'grep "/home\|/root" /etc/passwd | cut -d ":" -f 6 | while read -r target_home_dir; do [ -w $target_home_dir ] && [ -d $target_home_dir/.xmonad ] && HOME=$target_home_dir && xmonad --recompile ; done'
