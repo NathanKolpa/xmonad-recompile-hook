@@ -7,7 +7,7 @@ Target = xmonad-contrib
 Target = haskell-*
 
 [Action]
-Description = Recompiling xmonad after update
+Description = Recompile xmonad after package update
 When = PostTransaction
 Depends = coreutils
 Depends = xmonad

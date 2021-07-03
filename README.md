@@ -1,2 +1,3 @@
 # xmonad-recompile-hook
-This hook recompiles xmonad when necessary, to prevent errors after restarting
+A pacman hook that recompiles xmonad after package updates. 
+This prevents black screens after restarting.
