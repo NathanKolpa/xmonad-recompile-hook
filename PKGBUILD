@@ -11,6 +11,12 @@ makedepends=(git)
 options=()
 source=("git+$url")
 md5sums=('SKIP')
+sha256sums=('SKIP')
+
+pkgver() {
+	cd "xmonad-recompile-hook"
+	git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
 
 package() {
 	cd "xmonad-recompile-hook"
