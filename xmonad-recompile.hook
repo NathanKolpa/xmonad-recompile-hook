@@ -11,4 +11,4 @@ Description = Recompile xmonad after package update
 When = PostTransaction
 Depends = coreutils
 Depends = xmonad
-Exec = /bin/sh -c 'grep "/home\|/root" /etc/passwd | cut -d ":" -f 6 | while read -r target_home_dir; do [ -w $target_home_dir -o -d $target_home_dir/.confi000g/xmonad ] || [  -w $target_home_dir -o -d $target_home_dir/.xmonad ] && HOME=$target_home_dir && xmonad --recompile ; done'
+Exec = /bin/sh -c 'grep "/home\|/root" /etc/passwd | cut -d ":" -f 6 | while read -r target_home_dir; do [ -w $target_home_dir -o -d $target_home_dir/.config/xmonad ] || [  -w $target_home_dir -o -d $target_home_dir/.xmonad ] && HOME=$target_home_dir && xmonad --recompile ; done'
